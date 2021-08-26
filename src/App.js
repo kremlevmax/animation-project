@@ -28,7 +28,7 @@ class App extends Component {
           isInitial={this.state.isInitial}
           isOpen={this.state.isOpen}
         />
-        <Backdrop isOpen={this.state.isOpen} />
+        <Backdrop isOpen={this.state.isOpen} isInitial={this.state.isInitial} />
         <button className='Button' onClick={this.showModal}>
           Open Modal
         </button>

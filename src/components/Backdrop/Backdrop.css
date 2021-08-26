@@ -1,6 +1,6 @@
 .Backdrop {
+  z-index: -1;
   position: fixed;
-  z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
@@ -8,13 +8,36 @@
   background-color: rgba(0, 0, 0, 0.8);
   transition: all 400ms ease-in;
 }
+.BackdropInitial {
+  opacity: 0;
+  z-index: -2;
+}
 
 .BackdropOpen {
-  opacity: 1;
-  z-index: 4;
+  animation: openBackdrop 0.4s ease-out forwards;
 }
 
 .BackdropClosed {
-  opacity: 0;
-  z-index: -2;
+  animation: closeBackdrop 0.4s ease-out forwards;
+}
+
+@keyframes openBackdrop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+@keyframes closeBackdrop {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }

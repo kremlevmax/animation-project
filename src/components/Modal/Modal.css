@@ -1,6 +1,6 @@
 .Modal {
+  z-index: 3;
   position: fixed;
-  z-index: 200;
   border: 1px solid #eee;
   box-shadow: 0 2px 2px #ccc;
   background-color: white;
@@ -28,21 +28,17 @@
 @keyframes openModal {
   0% {
     opacity: 0;
-    z-index: -1;
   }
   100% {
     transform: translateY(0);
-    z-index: 5;
   }
 }
 
 @keyframes closeModal {
   0% {
     transform: translateY(0);
-    z-index: 5;
   }
   100% {
     opacity: 0;
-    z-index: -1;
   }
 }
