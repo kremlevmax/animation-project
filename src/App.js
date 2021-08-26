@@ -8,21 +8,26 @@ import List from "./components/List/List";
 class App extends Component {
   state = {
     isOpen: false,
+    isInitial: true,
   };
 
   showModal = () => {
-    this.setState({ isOpen: true });
+    this.setState({ isOpen: true, isInitial: false });
   };
 
   closeModal = () => {
-    this.setState({ isOpen: false });
+    this.setState({ isOpen: false, isInitial: false });
   };
 
   render() {
     return (
       <div className='App'>
         <h1>React Animations</h1>
-        <Modal closed={this.closeModal} isOpen={this.state.isOpen} />
+        <Modal
+          closed={this.closeModal}
+          isInitial={this.state.isInitial}
+          isOpen={this.state.isOpen}
+        />
         <Backdrop isOpen={this.state.isOpen} />
         <button className='Button' onClick={this.showModal}>
           Open Modal
