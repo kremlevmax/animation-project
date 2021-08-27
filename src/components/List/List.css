@@ -1,22 +1,48 @@
 .List {
-    list-style: none;
-    margin: 0 auto;
-    padding: 0;
-    width: 280px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 280px;
 }
 
 .ListItem {
-    margin: 0;
-    padding: 10px;
-    box-sizing: border-box;
-    width: 100%;
-    border: 1px solid #521751;
-    background-color: white;
-    text-align: center;
-    cursor: pointer;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #521751;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
 }
 
 .ListItem:hover,
 .ListItem:active {
-    background-color: #ccc;
+  background-color: #ccc;
+}
+
+.ListItemShown {
+  animation: showListItem 0.4s ease-out forwards;
+}
+
+.ListItemHidden {
+  animation: hideListItem 0.4s ease-out forwards;
+}
+
+@keyframes showListItem {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hideListItem {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

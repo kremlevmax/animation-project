@@ -16,7 +16,6 @@ const modal = (props) => {
             : null,
         ];
 
-        console.log(cssClasses);
         return (
           <div className={cssClasses.join(" ")}>
             <h1>A Modal</h1>
